@@ -52,7 +52,7 @@ The project is built with Python 3.10.14, PyTorch 2.2.2. CUDA 12.1, cuDNN 8.9.02
 For installing, follow these instructions:
 ~~~
 # git clone this repository
-git clone https://github.com/jwmao1/story-adapter.git
+git clone https://github.com/UCSC-VLAA/story-adapter.git
 cd story-adapter
 
 # create new anaconda env
