@@ -271,8 +271,9 @@ class StoryAdapterXL(IPAdapter):
         if prompt is None:
             prompt = "best quality, high quality"
         else:
-            prompt = "best quality, high quality, comic " + prompt + " . graphic illustration, comic art, graphic novel art, vibrant, highly detailed"
-            # "best quality, high quality, cinematic film still, " + prompt + " . shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy"
+            prompt = "best quality, high quality, comic " + prompt + " . graphic illustration, comic art, graphic novel art, vibrant, highly detailed" # comic style
+            # "best quality, high quality, cinematic film still, " + prompt + " . shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy"  # film style
+            # "best quality, high quality, " + prompt # realistic style
 
         if negative_prompt is None:
             negative_prompt = "monochrome, lowres, bad anatomy, worst quality, low quality"
