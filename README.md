@@ -78,7 +78,7 @@ python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path yo
 
 ~~~
 python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin 
---story [your story] 
+--story "your prompt1" "your prompt2" "your prompt3" ... "your promptN"
 ~~~
 Note: Regarding custom stories, we suggest the template [Character Definition + Interaction Definition + Scene Definition] for better story visualization performance. For example, the Character Definition is "One man wearing yellow robe," the Interaction Definition is "dancing," and the Scene Definition is "the palace hall." So, the input prompt is "One man wearing yellow robe dancing in the palace hall."
 
