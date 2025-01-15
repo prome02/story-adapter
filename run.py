@@ -489,7 +489,7 @@ parser.add_argument('--base_model_path', default=r"./RealVisXL_V4.0", type=str)
 parser.add_argument('--image_encoder_path', type=str, default=r"./IP-Adapter/sdxl_models/image_encoder")
 parser.add_argument('--ip_ckpt', default=r"./IP-Adapter/sdxl_models/ip-adapter_sdxl.bin", type=str)
 parser.add_argument('--device', default="cuda", type=str)
-parser.add_argument('--story', default=story1, type=list)
+parser.add_argument('--story', default=story1, nargs='+', type=str)
 
 args = parser.parse_args()
 
