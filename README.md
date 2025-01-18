@@ -114,6 +114,38 @@ Note: Regarding custom stories, we suggest the template [Character Definition + 
 <br>
 <img src="./docs/comic3.png" width="1080"/>
 
+### Running with Different Style
+comic style:
+~~~
+python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin --style comic
+~~~
+<br>
+
+<img src="./docs/style_comic.png" width="1080"/>
+
+<be>
+
+film style:
+~~~
+python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin --style film
+~~~
+<br>
+
+<img src="./docs/style_film.png" width="1080"/>
+
+<be>
+
+realistic style:
+~~~
+python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin --style realistic
+~~~
+<br>
+
+<img src="./docs/style_realistic.png" width="1080"/>
+
+<be>
+
+
 ## Acknowledgement 🍻
 
 Deeply appreciate these wonderful open source projects: [stablediffusion](https://github.com/Stability-AI/StableDiffusion), [clip](https://github.com/openai/CLIP), [ip-adapter](https://github.com/tencent-ailab/IP-Adapter), [storygen](https://github.com/haoningwu3639/StoryGen), [storydiffusion](https://github.com/HVision-NKU/StoryDiffusion), [theatergen](https://github.com/donahowe/TheaterGen), [timm](https://github.com/huggingface/pytorch-image-models).
