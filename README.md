@@ -9,6 +9,7 @@
 <a href="https://arxiv.org/abs/2410.06244"><img src="https://img.shields.io/badge/arXiv-2410.06244-b31b1b.svg" height=22.5></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" height=22.5></a>  
 <a href="https://jwmao1.github.io/storyadapter/"><img src="https://img.shields.io/badge/project-StoryAdapter-purple.svg" height=22.5></a>
+<a href="https://colab.research.google.com/drive/1sFbw0XlCQ6DBRU3s2n_F2swtNmHoicM-?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>
 </span>
 
 Code for the paper [Story-Adapter: A Training-free Iterative Framework for Long Story Visualization](https://arxiv.org/abs/2410.06244)
@@ -51,7 +52,7 @@ The project is built with Python 3.10.14, PyTorch 2.2.2. CUDA 12.1, cuDNN 8.9.02
 For installing, follow these instructions:
 ~~~
 # git clone this repository
-git clone https://github.com/jwmao1/story-adapter.git
+git clone https://github.com/UCSC-VLAA/story-adapter.git
 cd story-adapter
 
 # create new anaconda env
@@ -70,15 +71,16 @@ pip install -r requirements.txt
 ### Running Demo
 
 ~~~
-python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path//IP-Adapter/sdxl_models/ip-adapter_sdxl.bin 
+python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin 
 ~~~
 
 ### Customized Running
 
 ~~~
-python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path//IP-Adapter/sdxl_models/ip-adapter_sdxl.bin 
---story [your story] 
+python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin 
+--story "your prompt1" "your prompt2" "your prompt3" ... "your promptN"
 ~~~
+Note: Regarding custom stories, we suggest the template [Character Definition + Interaction Definition + Scene Definition] for better story visualization performance. For example, the Character Definition is "One man wearing yellow robe," the Interaction Definition is "dancing," and the Scene Definition is "the palace hall." So, the input prompt is "One man wearing yellow robe dancing in the palace hall."
 
 ## Performance 🎨
 
@@ -112,9 +114,41 @@ python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path yo
 <br>
 <img src="./docs/comic3.png" width="1080"/>
 
+### Running with Different Style
+comic style:
+~~~
+python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin --style comic
+~~~
+<br>
+
+<img src="./docs/style_comic.png" width="1080"/>
+
+<be>
+
+film style:
+~~~
+python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin --style film
+~~~
+<br>
+
+<img src="./docs/style_film.png" width="1080"/>
+
+<be>
+
+realistic style:
+~~~
+python run.py --base_model_path your_path/RealVisXL_V4.0 --image_encoder_path your_path/IP-Adapter/sdxl_models/image_encoder --ip_ckpt your_path/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin --style realistic
+~~~
+<br>
+
+<img src="./docs/style_realistic.png" width="1080"/>
+
+<be>
+
+
 ## Acknowledgement 🍻
 
-Deeply appreciate these wonderful open source projects: [stablediffusion](https://github.com/Stability-AI/StableDiffusion), [clip](https://github.com/openai/CLIP), [ip-adapter](https://github.com/tencent-ailab/IP-Adapter), [storygen](https://github.com/haoningwu3639/StoryGen), [storydiffusion](https://github.com/HVision-NKU/StoryDiffusion), [timm](https://github.com/huggingface/pytorch-image-models).
+Deeply appreciate these wonderful open source projects: [stablediffusion](https://github.com/Stability-AI/StableDiffusion), [clip](https://github.com/openai/CLIP), [ip-adapter](https://github.com/tencent-ailab/IP-Adapter), [storygen](https://github.com/haoningwu3639/StoryGen), [storydiffusion](https://github.com/HVision-NKU/StoryDiffusion), [theatergen](https://github.com/donahowe/TheaterGen), [timm](https://github.com/huggingface/pytorch-image-models).
 
 ## Citation 🔖
 
